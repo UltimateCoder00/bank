@@ -1,4 +1,5 @@
-# Bank Account App
+# Bank Account App [![Build Status](https://travis-ci.org/UltimateCoder00/bank.svg?branch=master)](https://travis-ci.org/UltimateCoder00/bank)
+
 
 ## Description
 This project is built using ruby 2.4.0 that creates the same facilities a bank account does. Banks accounts are allowed to have deposits, withdrawals and print statements. See specification for more details.
