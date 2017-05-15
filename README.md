@@ -74,4 +74,35 @@ To use the program:
 
 ### Program Example
 ```
+[1] pry(main)> require './lib/bank_account'
+=> true
+[2] pry(main)> require './lib/statement'
+=> true
+[3] pry(main)> require './lib/transaction_history'
+=> true
+[4] pry(main)> bank_account = BankAccount.new
+=> #<BankAccount:0x007f885985b978 @balance=0, @statement=#<TransactionHistory:0x007f885985b950 @statement=[]>>
+[5] pry(main)> bank_account.deposit(1000)
+=> 1000
+[6] pry(main)> bank_account.deposit(2500)
+=> 3500
+[7] pry(main)> bank_account.balance
+=> 3500
+[8] pry(main)> bank_account.withdraw(500)
+=> 3000
+[9] pry(main)> bank_account.display_statement
+   Date    ||  Withdrawals  ||  Deposits  ||  Balance
+{:date=>"2017-05-15", :withdrawals=>0, :deposits=>1000, :balance=>1000}
+{:date=>"2017-05-15", :withdrawals=>0, :deposits=>2500, :balance=>3500}
+{:date=>"2017-05-15", :withdrawals=>500, :deposits=>0, :balance=>3000}
+=> nil
+[10] pry(main)> bank_account
+=> #<BankAccount:0x007f885985b978
+ @balance=3000,
+ @statement=
+  #<TransactionHistory:0x007f885985b950
+   @statement=
+    [{:date=>"2017-05-15", :withdrawals=>0, :deposits=>1000, :balance=>1000},
+     {:date=>"2017-05-15", :withdrawals=>0, :deposits=>2500, :balance=>3500},
+     {:date=>"2017-05-15", :withdrawals=>500, :deposits=>0, :balance=>3000}]>>
  ```
