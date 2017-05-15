@@ -69,7 +69,7 @@ To run the tests do:
 To use the program:
 
 ```
-- Run irb:
+- Run irb (or pry):
 ```
 
 ### Program Example
