@@ -2,7 +2,7 @@ require 'bank_account'
 
 describe BankAccount do
 
-  subject(:bank_account) {described_class.new}
+  subject(:bank_account) {described_class.new }
 
   let(:stubbed_bank_account) {double(:stubbed_bank_account, statement: statement)}
   let(:statement) {:statement}
