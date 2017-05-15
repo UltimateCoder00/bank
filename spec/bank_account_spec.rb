@@ -80,6 +80,7 @@ describe BankAccount do
     it 'displays bank account balance' do
       bank_account.statement.add_transaction(date, withdrawals, deposits, balance)
       bank_account.statement.add_transaction(date, withdrawals, deposits, balance + deposits)
+      bank_account.statement.add_transaction(date, 500, 0, 1500)
       expect(bank_account.display_statement).to eq nil
     end
   end

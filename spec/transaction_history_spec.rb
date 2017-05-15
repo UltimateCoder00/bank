@@ -25,6 +25,7 @@ describe TransactionHistory do
     it 'displays bank account balance' do
       transaction_history.add_transaction(date, withdrawals, deposits, balance)
       transaction_history.add_transaction(date, withdrawals, deposits, balance + deposits)
+      transaction_history.add_transaction(date, 500, 0, 1500)
       expect(transaction_history.display_statement).to eq nil
     end
   end
